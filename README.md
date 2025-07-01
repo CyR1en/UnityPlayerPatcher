@@ -115,7 +115,7 @@ E8 D9 86 F7 FF    CALL FUN_1806406b0
     The compiled executable will be available at:
     
     ```
-    build/bin/UnityPlayerPatcher.exe
+    build\bin\release\UnityPlayerPatcher.exe
     ```
 
 ### Build Options
