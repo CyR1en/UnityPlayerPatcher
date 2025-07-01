@@ -1,0 +1,34 @@
+name: Build and Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up CMake
+        uses: jwlawson/actions-setup-cmake@v1
+        with:
+          cmake-version: '3.21.1'
+
+      - name: Configure CMake
+        run: cmake -S . -B build
+
+      - name: Build
+        run: cmake --build build --config Release
+
+      - name: Export LATEST_TAG
+        run: |
+          echo "LATEST_TAG=$(curl -qsSL -H 'Accept: application/vnd.github+json' -H 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' -H 'X-GitHub-Api-Version: 2022-11-28' '${{ github.api_url }}/repos/${{ github.repository }}/releases/latest' | jq -r .tag_name)" >> $env:GITHUB_ENV
+
+      - name: Upload Release Executable
+        env:
+          GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        run:
+          gh release upload ${{ env.LATEST_TAG }} build\bin\release\UnityPlayerPatcher.exe
