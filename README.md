@@ -26,15 +26,16 @@ UnityPlayerPatcher modifies the UnityPlayer.dll binary to bypass Vulkan validati
 3. **Place the Patcher**
 
     Copy `UnityPlayerPatcher.exe` into the same directory as `UnityPlayer.dll`.
-    3. **Run the Patcher**
+   
+4. **Run the Patcher**
     
-    Execute the patcher from command line or by double-clicking:
+    Double-click `UnityPlayerPatcher.exe` or execute the command in the same directory:
     
     ```cmd
-    UnityPlayerPatcher.exe
+    ./UnityPlayerPatcher.exe
     ```
 
-4. **Expected Output**
+5. **Expected Output**
 
     ```
     ============================================
