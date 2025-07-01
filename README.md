@@ -7,8 +7,11 @@ A specialized binary patcher designed to disable the "force-vulkan" command-line
 UnityPlayerPatcher modifies the UnityPlayer.dll binary to bypass Vulkan validation, ensuring that the "force-vulkan" command-line argument is effectively ignored. This is particularly useful for users experiencing compatibility issues, performance problems, or stability concerns when Vulkan is forcibly enabled through launch parameters.
 
 ## How to Use
+1. **Download the Patcher**
 
-1. **Locate Your Game Directory**
+   Link: [https://github.com/CyR1en/UnityPlayerPatcher/releases/download/0.1.0/UnityPlayerPatcher.exe](https://github.com/CyR1en/UnityPlayerPatcher/releases/download/0.1.0/UnityPlayerPatcher.exe)
+
+2. **Locate Your Game Directory**
 
     Navigate to your PEAK installation folder where `UnityPlayer.dll` is located. This is typically:
     
@@ -16,7 +19,7 @@ UnityPlayerPatcher modifies the UnityPlayer.dll binary to bypass Vulkan validati
     [Steam Directory]\steamapps\common\PEAK\
     ```
 
-2. **Place the Patcher**
+3. **Place the Patcher**
 
     Copy `UnityPlayerPatcher.exe` into the same directory as `UnityPlayer.dll`.
     3. **Run the Patcher**
