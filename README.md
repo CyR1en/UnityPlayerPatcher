@@ -10,37 +10,37 @@ UnityPlayerPatcher modifies the UnityPlayer.dll binary to bypass Vulkan validati
 
 1. **Locate Your Game Directory**
 
-Navigate to your PEAK installation folder where `UnityPlayer.dll` is located. This is typically:
-
-```
-[Steam Directory]\steamapps\common\PEAK\
-```
+    Navigate to your PEAK installation folder where `UnityPlayer.dll` is located. This is typically:
+    
+    ```
+    [Steam Directory]\steamapps\common\PEAK\
+    ```
 
 2. **Place the Patcher**
 
-Copy `UnityPlayerPatcher.exe` into the same directory as `UnityPlayer.dll`.
-3. **Run the Patcher**
-
-Execute the patcher from command line or by double-clicking:
-
-```cmd
-UnityPlayerPatcher.exe
-```
+    Copy `UnityPlayerPatcher.exe` into the same directory as `UnityPlayer.dll`.
+    3. **Run the Patcher**
+    
+    Execute the patcher from command line or by double-clicking:
+    
+    ```cmd
+    UnityPlayerPatcher.exe
+    ```
 
 4. **Expected Output**
 
-```
-============================================
-UnityPlayer Vulkan Validation Bypass        
-By CyR1en                                   
-============================================
-[+] Backed up original DLL as: UnityPlayer_Original.dll
-[*] Located CALL instruction at offset: 0x[address]
-[*] Bytes at offset 0x[address]: E8 D9 86 F7 FF
-[+] Patched E8 D9 86 F7 FF -> 31 C0 90 90 90 (XOR EAX,EAX; NOP; NOP; NOP)
-[*] Bytes at offset 0x[address]: 31 C0 90 90 90
-[*] Vulkan validation bypass patch applied successfully to: UnityPlayer.dll
-```
+    ```
+    ============================================
+    UnityPlayer Vulkan Validation Bypass        
+    By CyR1en                                   
+    ============================================
+    [+] Backed up original DLL as: UnityPlayer_Original.dll
+    [*] Located CALL instruction at offset: 0x[address]
+    [*] Bytes at offset 0x[address]: E8 D9 86 F7 FF
+    [+] Patched E8 D9 86 F7 FF -> 31 C0 90 90 90 (XOR EAX,EAX; NOP; NOP; NOP)
+    [*] Bytes at offset 0x[address]: 31 C0 90 90 90
+    [*] Vulkan validation bypass patch applied successfully to: UnityPlayer.dll
+    ```
 
 ### Restoring Original Functionality
 
@@ -78,14 +78,6 @@ E8 D9 86 F7 FF    CALL FUN_1806406b0
 1. **Before Patch**: Command-line parser detects "force-vulkan" → calls unknown function → if successful, presumably sets Vulkan-related flags
 2. **After Patch**: Command-line parser detects "force-vulkan" → function call bypassed with failure return → Vulkan forcing pathway interrupted
 
-### Why This Approach Works
-
-The patch targets what appears to be a critical function call in the Vulkan activation sequence rather than the string parsing logic, providing several advantages:
-
-- **Strategic Intervention**: Interrupts the process at a point that appears crucial to Vulkan activation
-- **Reliability**: `XOR EAX,EAX` always produces a consistent failure result that the subsequent code interprets appropriately
-- **Minimal Impact**: Preserves all other Unity functionality and command-line argument processing
-
 ## Compilation
 
 ### Requirements
@@ -99,29 +91,29 @@ The patch targets what appears to be a critical function call in the Vulkan acti
 
 1. **Clone or Download Source**
 
-Ensure you have the project structure:
-
-```
-UnityPlayerPatcher/
-├── CMakeLists.txt
-├── src/
-│   └── main.cpp
-└── README.md
-```
+    Ensure you have the project structure:
+    
+    ```
+    UnityPlayerPatcher/
+    ├── CMakeLists.txt
+    ├── src/
+    │   └── main.cpp
+    └── README.md
+    ```
 
 2. **Compile the Project**
 
-```cmd
-cmake --build build --config Release
-```
+    ```cmd
+    cmake --build build --config Release
+    ```
 
 3. **Locate Executable**
 
-The compiled executable will be available at:
-
-```
-build/bin/UnityPlayerPatcher.exe
-```
+    The compiled executable will be available at:
+    
+    ```
+    build/bin/UnityPlayerPatcher.exe
+    ```
 
 ### Build Options
 
