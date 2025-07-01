@@ -138,7 +138,6 @@ cmake -G "Visual Studio 16 2019" ..
 
 - **Game Integrity**: The patch only affects Vulkan forcing; all other game functionality remains intact
 - **Reversibility**: Always keeps original DLL backup for easy restoration
-- **Version Compatibility**: Designed specifically for PEAK's Unity version
 - **Anti-Virus**: Some AV software may flag binary patchers as suspicious (false positive)
 
 ## License and Disclaimer
