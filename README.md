@@ -4,7 +4,7 @@ A specialized binary patcher designed to disable the "force-vulkan" command-line
 
 ## Motivation
 
-PEAK's current Steam launch configuration includes "force-vulkan" as its default launch option. As a result, launching the game directly from Steam always applies the "force-vulkan" parameter. This forced Vulkan mode can cause compatibility issues, including preventing certain mods from working entirely. UnityPlayerPatcher addresses this issue by bypassing the forced Vulkan activation, allowing users to run the game and their mods without restriction.
+PEAK's current Steam launch configuration includes "force-vulkan" as its default launch option. As a result, launching the game directly (outside of Steam) will always apply the "force-vulkan" parameter. This forced Vulkan mode can cause compatibility issues, including preventing certain mods from working entirely. UnityPlayerPatcher addresses this issue by bypassing the forced Vulkan activation, allowing users to run the game and their mods without restriction.
 
 ## How to Use
 1. **Download the Patcher**
