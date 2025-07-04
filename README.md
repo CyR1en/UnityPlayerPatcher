@@ -48,7 +48,6 @@ PEAK's current Steam launch configuration includes "force-vulkan" as its default
 
 ### Restoring Original Functionality
 
-To restore the original Vulkan forcing capability:
 
 1. Delete the patched `UnityPlayer.dll`
 2. Rename `UnityPlayer_Original.dll` back to `UnityPlayer.dll`
