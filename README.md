@@ -9,7 +9,7 @@ PEAK's current Steam launch configuration includes "force-vulkan" as its default
 ## How to Use
 1. **Download the Patcher**
 
-   Link: [https://github.com/CyR1en/UnityPlayerPatcher/releases/download/0.1.0/UnityPlayerPatcher.exe](https://github.com/CyR1en/UnityPlayerPatcher/releases/download/0.1.0/UnityPlayerPatcher.exe)
+   Link: [https://github.com/CyR1en/UnityPlayerPatcher/releases/download/0.1.1/UnityPlayerPatcher.exe](https://github.com/CyR1en/UnityPlayerPatcher/releases/download/0.1.1/UnityPlayerPatcher.exe)
 
 2. **Locate Your Game Directory**
 
