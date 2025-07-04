@@ -1,6 +1,6 @@
 # UnityPlayerPatcher - PEAK Vulkan Bypass Tool
 
-A specialized binary patcher designed to disable the "force-vulkan" command-line argument functionality in Unity's rendering engine for the game PEAK. This tool prevents forced Vulkan activation by intercepting and neutralizing the graphics API validation process at the assembly level.
+A binary patcher designed to disable the "force-vulkan" command-line argument in Unity's engine for the game PEAK  at the assembly level.
 
 ## Motivation
 
