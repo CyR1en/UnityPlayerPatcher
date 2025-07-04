@@ -118,27 +118,13 @@ E8 D9 86 F7 FF    CALL FUN_1806406b0
     build\bin\release\UnityPlayerPatcher.exe
     ```
 
-### Build Options
-
-For different build configurations:
-
-```cmd
-# Debug build (with debug symbols)
-cmake --build build --config Debug
-
-# Release build (optimized)
-cmake --build build --config Release
-
-# Specify generator (if needed)
-cmake -G "Visual Studio 16 2019" ..
-```
-
-
 ## Safety Considerations
 
 - **Game Integrity**: The patch only affects Vulkan forcing; all other game functionality remains intact
 - **Reversibility**: Always keeps original DLL backup for easy restoration
 - **Anti-Virus**: Some AV software may flag binary patchers as suspicious (false positive)
+- **Open Source**: The patcher is open source to verify that it's not doing anything malicious.
+- **Automatically Built Executable**: The executable in the release section is built and uploaded through GitHub actions. The executable is not manually uploaded from my computer, thus making sure that it only contains functionalities that can be viewed publicly.
 
 ## License and Disclaimer
 
