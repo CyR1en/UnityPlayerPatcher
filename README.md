@@ -64,7 +64,7 @@ The tool searches for the specific byte sequence `E8 D9 86 F7 FF`, which represe
 
 #### Assembly-Level Modification
 
-```assembly
+```asm
 ; Original instruction
 E8 D9 86 F7 FF    CALL FUN_1806406b0
 
