@@ -34,16 +34,18 @@ PEAK's current Steam launch configuration includes "force-vulkan" as its default
 5. **Expected Output**
 
     ```
-    ============================================
-    UnityPlayer Vulkan Validation Bypass        
-    By CyR1en                                   
-    ============================================
-    [+] Backed up original DLL as: UnityPlayer_Original.dll
-    [*] Located CALL instruction at offset: 0x[address]
-    [*] Bytes at offset 0x[address]: E8 D9 86 F7 FF
-    [+] Patched E8 D9 86 F7 FF -> 31 C0 90 90 90 (XOR EAX,EAX; NOP; NOP; NOP)
-    [*] Bytes at offset 0x[address]: 31 C0 90 90 90
-    [*] Vulkan validation bypass patch applied successfully to: UnityPlayer.dll
+   ============================================
+   UnityPlayer Vulkan Bypass
+   By CyR1en
+   ============================================
+   [+] Backed up original DLL as: UnityPlayer_Original.dll
+   [*] Searching for pattern: E8 D9 86 F7 FF
+   [*] Located CALL instruction at offset: 0x6c73d2
+   [+] Patched E8 D9 86 F7 FF -> 31 C0 90 90 90 (XOR EAX,EAX; NOP; NOP; NOP)
+   [*] Bytes at offset 0x6c73d2: 31 C0 90 90 90
+   [*] Vulkan bypass patch applied successfully to: UnityPlayer.dll
+   
+   Press any key to exit...
     ```
 
 ### Restoring Original Functionality
