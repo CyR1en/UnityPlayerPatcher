@@ -1,12 +1,37 @@
-# UnityPlayerPatcher - PEAK Vulkan Bypass Tool
+<h1 align="center">⚠️ This method is deprecated ⚠️</h1>
+<p align="center">➡️ See updated <code>How to use</code> below ⬅️</p>
+
+## UnityPlayerPatcher
 
 A low-level binary patcher designed to modify the Unity engine portable executable (PE) binary called `UnityPlayer.dll` for the game PEAK, specifically targeting and disabling the handling of the -force-vulkan command-line argument. This is achieved through direct assembly-level modifications, effectively preventing the engine from initializing with the Vulkan graphics backend, regardless of launch parameters.
 
-## Motivation
+<details>
+   <Summary>Motivation</Summary>
+   PEAK's current Steam launch configuration includes `force-vulkan` as its default launch option. As a result, launching the game directly (outside of Steam) will always apply the `force-vulkan` parameter. This forced Vulkan mode can cause compatibility issues, including preventing certain mods from working entirely. UnityPlayerPatcher addresses this issue by bypassing the forced Vulkan activation, allowing users to run the game and their mods without restriction.
+</details>
 
-PEAK's current Steam launch configuration includes `force-vulkan` as its default launch option. As a result, launching the game directly (outside of Steam) will always apply the `force-vulkan` parameter. This forced Vulkan mode can cause compatibility issues, including preventing certain mods from working entirely. UnityPlayerPatcher addresses this issue by bypassing the forced Vulkan activation, allowing users to run the game and their mods without restriction.
+
 
 ## How to Use
+**This patcher is no longer needed!** I've integrated a [better solution](https://github.com/CyR1en/UnityDoorstop-PEAK) within BepInExPack for PEAK. 
+
+### New way to bypass Vulkan
+Make sure you have the latest version of BepInExPack for PEAK ([5.4.75301](https://thunderstore.io/c/peak/p/BepInEx/BepInExPack_PEAK/))
+
+To bypass Vulkan, all you have to do is set `-dx12` to your launch parameters.
+
+- **Steam**: `PEAK > Settings > Properties... > General`
+
+- **Thunderstore**: `Settings > Debugging > Set launch parameters`
+
+- **r2modman**: `Settings > Debugging > Set launch parameters`
+
+- **Gale**: `Settings > PEAK settings > Set custom launch arguments`
+
+
+<details>
+   <summary><i>If you still want to use this patcher</i></summary>
+   
 1. **Download the Patcher**
 
    Link: [https://github.com/CyR1en/UnityPlayerPatcher/releases/download/0.1.1/UnityPlayerPatcher.exe](https://github.com/CyR1en/UnityPlayerPatcher/releases/download/0.1.1/UnityPlayerPatcher.exe)
@@ -53,6 +78,8 @@ PEAK's current Steam launch configuration includes `force-vulkan` as its default
 
 1. Delete the patched `UnityPlayer.dll`
 2. Rename `UnityPlayer_Original.dll` back to `UnityPlayer.dll`
+</details>
+
 
 ## How It Works
 
