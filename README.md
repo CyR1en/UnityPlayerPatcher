@@ -13,7 +13,7 @@ A low-level binary patcher designed to modify the Unity engine portable executab
 
 
 ## How to Use
-**This patcher is no longer needed!** I've integrated a [better solution](https://github.com/CyR1en/UnityDoorstop-PEAK) within BepInExPack for PEAK. 
+> This patcher is now integrated in my fork of [Unity Doorstop](https://github.com/CyR1en/UnityDoorstop-PEAK) that is included in the BepInExPack for PEAK. This allows me to patch UnityPlayer at runtime, giving you an untouched UnityPlayer.dll when the game closes.
 
 ### New way to bypass Vulkan
 Make sure you have the latest version of BepInExPack for PEAK ([5.4.75301](https://thunderstore.io/c/peak/p/BepInEx/BepInExPack_PEAK/))
